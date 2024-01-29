@@ -9,7 +9,7 @@
 		"jsx": "react-jsx",
 		"forceConsistentCasingInFileNames": true,
 		"esModuleInterop": true,
-		"module": "ESNext",
+		"module": "commonjs",
 		"moduleResolution": "node10",
 		"declaration": true,
 		"outDir": "./dist/",

@@ -1,6 +1,6 @@
 {
 	"name": "react-classed-components",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Heavily inspired by styled-components, I needed something that used basic classNames without having much overhead.",
 	"keywords": ["react", "styling", "classes"],
 	"files": [
