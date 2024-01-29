@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 import classed from '../../src/index';
 
 const TEST = "red";
-const Title = classed.h1<{ someCondition: boolean }>`
+const Title = classed.h1<{ someCondition?: boolean }>`
 ${({someCondition}) => `${someCondition ? "test" : "no-test"}`}
 ${TEST}
 `;

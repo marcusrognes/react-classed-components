@@ -1,7 +1,13 @@
-import {ComponentType, createElement, createFactory, JSXElementConstructor, ReactElement, ReactNode} from "react";
+import {
+	ComponentProps,
+	ComponentType,
+	createElement,
+	JSXElementConstructor,
+	ReactElement,
+} from "react";
 import elements, {SupportedHTMLElements} from "./domElements";
 
-type AcceptableTag = SupportedHTMLElements | ComponentType;
+type AcceptableTag = SupportedHTMLElements | ComponentType<any>;
 
 function processString(string: string) {
 	return string.replace(/(?:\r\n|\r|\n)/g, " ");
@@ -23,27 +29,27 @@ function processTemplateLiteral<T>(strings: TemplateStringsArray, calls: (string
 }
 
 
-type ComponentProps = { className?: string, children?: ReactNode | string };
+//type ComponentProps = { className?: string, children?: ReactNode | string };
 
 
-type TemplateElementFactory<T extends ComponentProps> = ({
+type TemplateElementFactory<T extends ComponentProps<'div'>> = ({
 	                                                         className,
 	                                                         ...props
                                                          }: T) => ReactElement<{}, string | JSXElementConstructor<any>>;
 
-type TemplateStringElementFactory<T extends ComponentProps> = (strings: TemplateStringsArray, ...calls: (string | ((props: T) => string))[]) => TemplateElementFactory<T>;
+type TemplateStringElementFactory<T extends ComponentProps<'div'>> = (strings: TemplateStringsArray, ...calls: (string | ((props: T) => string))[]) => TemplateElementFactory<T>;
 
 function elementConstructor(tag: AcceptableTag): <T>(strings: TemplateStringsArray, ...calls: (string | ((props: T) => string))[]) => ({
 	                                                                                                                                       className,
 	                                                                                                                                       ...props
-                                                                                                                                       }: any) => ReactElement<{}, string | JSXElementConstructor<any>> {
+                                                                                                                                       }: ComponentProps<'div'> & T) => ReactElement<{}, string | JSXElementConstructor<any>> {
 	if (!tag) throw new Error("Need tag");
 
 	// TODO: Make sure class accepts correct props, and not any
 	return (strings: TemplateStringsArray, ...calls: (string | ((props: any) => string))[]): ({
 		                                                                                          className,
 		                                                                                          ...props
-	                                                                                          }: any) => ReactElement<{}, string | JSXElementConstructor<any>> => {
+	                                                                                          }: ComponentProps<'div'>) => ReactElement<{}, string | JSXElementConstructor<any>> => {
 		return ({className, ...props}) => {
 			let classNameList = [];
 			if (className) classNameList.push(className);
