@@ -1,8 +1,8 @@
 {
-	"name": "react-pragmatic-router",
-	"version": "2.1.0",
-	"description": "A simple react router for lazy people, without all the added complexity of react-router and the likes.",
-	"keywords": ["react", "router", "route", "link"],
+	"name": "react-classed-components",
+	"version": "1.0.0",
+	"description": "Heavily inspired by styled-components, I needed something that used basic classNames without having much overhead.",
+	"keywords": ["react", "styling", "classes"],
 	"files": [
 		"dist"
 	],
@@ -16,7 +16,7 @@
 	"author": "Marcus Rognes <marcus@rognes.guru>",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/marcusrognes/react-pragmatic-router.git"
+		"url": "git+https://github.com/marcusrognes/react-classed-components.git"
 	},
 	"license": "ISC",
 	"peerDependencies": {
