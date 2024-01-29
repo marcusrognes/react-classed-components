@@ -51,7 +51,7 @@ function App() {
 		<Footer>
 			<Inner>
 				<p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a
-					href="https://twitter.com/mdo">@mdo</a>. implemented with classed-components</p>
+					href="https://twitter.com/mdo">@mdo</a>. implemented with react-classed-components</p>
 			</Inner>
 		</Footer>
 	</Wrapper>;
