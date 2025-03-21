@@ -1,3 +1,3 @@
-import classed from './Classed';
+import classed from "./Classed";
 
 export default classed;

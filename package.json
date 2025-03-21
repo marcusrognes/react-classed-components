@@ -1,17 +1,14 @@
 {
 	"name": "react-classed-components",
-	"version": "1.0.1",
+	"version": "19.0.0",
 	"description": "Heavily inspired by styled-components, I needed something that used basic classNames without having much overhead.",
 	"keywords": ["react", "styling", "classes"],
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "tsc",
-		"format": "prettier --write .",
-		"dev": "webpack serve --mode development --config ./examples/simple/webpack.config.js"
+		"format": "prettier --write ."
 	},
 	"author": "Marcus Rognes <marcus@rognes.guru>",
 	"repository": {
@@ -20,16 +17,13 @@
 	},
 	"license": "ISC",
 	"peerDependencies": {
-		"react": "^18.2.0"
+		"react": "^19.0.0"
 	},
 	"devDependencies": {
-		"react-dom": "^18.2.0",
+		"@types/react": "^19.0.0",
+		"@types/react-dom": "^19.0.0",
+		"react-dom": "^19.0.0",
 		"ts-loader": "^9.5.1",
-		"@types/react": "^18.2.45",
-		"@types/react-dom": "^18.2.18",
-		"html-webpack-plugin": "^5.6.0",
-		"webpack": "^5.89.0",
-		"webpack-cli": "^5.1.4",
-		"webpack-dev-server": "^4.15.1"
+		"typescript": "^5.8.2"
 	}
 }

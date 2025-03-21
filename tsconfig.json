@@ -13,14 +13,8 @@
 		"moduleResolution": "node10",
 		"declaration": true,
 		"outDir": "./dist/",
-		"paths": {
-		}
+		"paths": {}
 	},
-	"include": [
-		"src/**/*.ts",
-		"src/**/*.tsx",
-	],
-	"exclude": [
-		"node_modules"
-	]
+	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"exclude": ["node_modules"]
 }
